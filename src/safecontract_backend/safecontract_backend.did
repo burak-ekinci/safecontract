@@ -1,0 +1,37 @@
+type User = record {
+  identity: text;
+  email: text;
+  password: text;
+};
+
+type Session = record {
+  user_id: text;
+};
+
+type Contract = record {
+    id: text;
+    creator: text;
+    approver: text;
+    terms: text;
+    approved_creator: bool;
+    approved_approver: bool;
+}
+
+service : {
+    "greet": (text) -> (text) query;
+    "greets": () -> (text) query;
+    "sayhello": (text) -> (text) query;
+    sign_up : (text, text) -> (variant { Ok : null; Err : text });
+    login : (text, text) -> (variant { Ok : null; Err : text });
+    logout : () -> ();
+    get_current_user : () -> (opt text);
+    get_contract : () -> (opt text);
+    get_contract_id : () -> (opt text);
+    get_current_principal : () -> (text) query;
+   add_contract : (contract_text: text, approver2: text) -> (variant { Ok : null; Err : text });
+   approve_contract : (contract_id: text) -> (bool);
+    
+    };
+
+
+

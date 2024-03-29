@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "safecontract_backend": {
+      "candid": "src/safecontract_backend/safecontract_backend.did",
+      "package": "safecontract_backend",
+      "type": "rust"
+    },
+    "safecontract_frontend": {
+      "dependencies": [
+        "safecontract_backend"
+      ],
+      "source": [
+        "src/safecontract_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "safecontract_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
