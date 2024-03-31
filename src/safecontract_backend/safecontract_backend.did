@@ -19,18 +19,16 @@ type Contract = record {
 
 service : {
     "greet": (text) -> (text) query;
-    "greets": () -> (text) query;
     "sayhello": (text) -> (text) query;
     sign_up : (text, text) -> (variant { Ok : null; Err : text });
-    login : (text, text) -> (variant { Ok : null; Err : text });
-    logout : () -> ();
-    get_current_user : () -> (opt text);
-    get_contract : () -> (opt text);
-    get_contract_id : () -> (opt text);
-    get_current_principal : () -> (text) query;
-   add_contract : (contract_text: text, approver2: text) -> (variant { Ok : null; Err : text });
-   approve_contract : (contract_id: text) -> (bool);
-    
+    login : (email:text, password:text) -> (variant { Ok : null; Err : text });
+    logout : (email : text) -> ();
+    add_contract : (creator: text, approver: text, terms:text) -> (variant { Ok : null; Err : text });
+    get_contract : (contract_id:text) -> (opt text);
+    approve_contract : (current_email:text, contract_id: text) -> (bool);
+    get_contract_id : (email:text) -> (opt text);
+    add_contract_id_to_user: (user_email:text, contract_id:text) -> ();
+
     };
 
 

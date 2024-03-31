@@ -1,7 +1,6 @@
 mod auth;
 mod contract;
 
-use candid::Principal;
 use ic_cdk::query;
 use serde::{Deserialize, Serialize};
 use std::cell::RefCell;
@@ -19,7 +18,7 @@ fn sayhello(name: String) -> String {
 
 // Types
 type Contracts = BTreeMap<String, Contract>;
-type Users = BTreeMap<Principal, User>;
+type Users = BTreeMap<String, User>; //..
 type ActiveSessions = Vec<Session>;
 
 thread_local! {
@@ -50,5 +49,5 @@ struct User {
 // Session Struct
 #[derive(Debug, Serialize, Deserialize)]
 struct Session {
-    pub user_id: Principal, // Check here
+    pub user_id: String, // ..
 }
