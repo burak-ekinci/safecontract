@@ -36,12 +36,7 @@ Understanding Satoshi. </br> </br>
 
 Safe Contract addresses the trust issue in the world by providing the highest level of security possible, making it a follower of fraud and agreements itself. It allows you to create your own contracts in a highly secure environment.
 
-### The Vision of DMS
-
-The primary vision of the DMS is to establish DMS as the <b> <i> central platform for healthcare service providers and patients worldwide. </i> </b>
-<br>Through the vast data flow integrated into DMS, we empower its AI capabilities, transforming it into an efficient and proactive predictive healthcare service provider. <br> This strategic approach aims to revolutionize healthcare delivery, offering advanced and personalized services to users globally.
-
-### Key Contributions of DMS
+### Key Contributions of Safe Contract
 
 ### The possibility to eliminate insecurities in Remote Work:
 
