@@ -13,7 +13,7 @@
   - [Deploying Canisters](#deploying-canisters)
 - [Project Functionalities](#project-functionalities)
   - [Testing Process for Hackathon](#testing-process-for-hackathon)
-  - [UI Photos](#welcome)
+  - [UI Photos](#-welcome)
 
 ## Project Name
 
@@ -44,7 +44,7 @@ Safe Contract addresses the trust issue in the world by providing the highest le
 
 ### Versitale Application:
 
-You can hash the photos of your physical contracts, property deeds, checks, and other valuable items using IPFS (InterPlanetary File System) and store them on the ICP (<a href="https://internetcomputer.org/"> Internet Computer Protocol</a<> ) blockchain. This method enhances document security by ensuring data integrity and provides a decentralized structure
+You can hash the photos of your physical contracts, property deeds, checks, and other valuable items using IPFS (InterPlanetary File System) and store them on the ICP (<a href="https://internetcomputer.org/"> Internet Computer Protocol</a>) blockchain. This method enhances document security by ensuring data integrity and provides a decentralized structure
 
 ### Forward Fersatility:
 
