@@ -153,281 +153,37 @@ dfx deploy
 
 After running these commands, you can test the application by accessing it at http://localhost:8080 in your web browser.
 
+## &#9745; Welcome
+
+Welcome Page
+<br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/Welcome.jpeg"> <br> </br>
+
 ## &#9745; Authentication
 
-<br> <img src="https://github.com/tugberk963/ICP_Internship_Bootcamp_Final_Project/blob/main/auth.gif"> <br> </br>
+You can Sign Up or Log In to the DApp
+<br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/login.jpeg"> <br> </br>
 
-## &#9745; Editing Personal Profile
+## &#9745; Add a Contract
 
-Patients have the ability to edit and manage their personal profiles within the system.
-<br> <img src="https://github.com/tugberk963/ICP_Internship_Bootcamp_Final_Project/blob/main/personal_profile.gif"> <br> </br>
+You can sign and verify contracts with other people
+<br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/addContract.jpeg"> <br> </br>
 
-## &#9745;Creating a Provider
+## &#9745; Approve Contract as a Creator
 
-This function, typically reserved for Admin users, has been made accessible on the user's navbar for convenience during the testing and development phase, as we are utilizing a single identity for these purposes.
-<br> <img src="https://github.com/tugberk963/ICP_Internship_Bootcamp_Final_Project/blob/main/setting_provider.gif"> <br> </br>
+You can sign and verify contracts with other people
+<br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/creatorApproved.jpeg"> <br> </br>
 
-## &#9745; Editing Provider Profile
+## &#9745; Make Sure that Other Approvers was Approved Contract
 
-Providers have the capability to edit their name and location within the system.
-<br> <img src="https://github.com/tugberk963/ICP_Internship_Bootcamp_Final_Project/blob/main/providerprofile.gif"> <br> </br>
+Each user can see whether the other user approves the contract or not
+<br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/allApproved.jpeg"> <br> </br>
 
-## &#9745; Provider Submodule Management: Departments, Doctors, and Appointment Scheduling
+## &#9745; Listing my All Contracts
 
-Providers are able to create departments, add doctors to those departments, and manage their appointment schedules, including dates and times, within the system.
-<br> <img src="https://github.com/tugberk963/ICP_Internship_Bootcamp_Final_Project/blob/main/creatingappointment.gif"> <br> </br>
+See contracts that you or people have created for you. Confirm as per your wish.
+<br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/notapproved.jpeg"> <br> </br>
 
-## &#9745; Making an Appointment as an User.
+## &#9745; You can See the Roadmap of the Project
 
-Patients have the ability to view active providers on the DMS and can schedule appointments with their desired departments, doctors, dates, and times.
-<br> <img src="https://github.com/tugberk963/ICP_Internship_Bootcamp_Final_Project/blob/main/takinganappointment.gif"> <br> </br>
-
-## &#9745; Managing and Viewing Health Data.
-
-Patients have access to view their own health data on the DMS. Meanwhile, providers are able to edit the health data of desired patients or users.
-<br> <img src="https://github.com/tugberk963/ICP_Internship_Bootcamp_Final_Project/blob/main/managinghealthdata.gif"> <br> </br>
-
-## &#9745; Searching Patients
-
-Providers have the capability to search for desired patients and view their data within the system.
-<br> <img src="https://github.com/tugberk963/ICP_Internship_Bootcamp_Final_Project/blob/main/searchingpatients.gif"> <br> </br>
-
-## Project Functionalities
-
-## Authentication
-
-### &#9745; Signup
-
-Users can signup to DMS with desired username and password.
-
-```rust
-fn sign_up(username: String, password: String) -> Result<(), String>
-```
-
-### &#9745; Login
-
-When users login with their username and password, if the credentials are correct. Login function adds their Principal ID to ACTIVE_SESSIONS.
-
-```rust
-fn login(username: String, password: String) -> Result<(), String>
-```
-
-### &#9745; Logout
-
-When user wants to log off. Their Principal ID will be removed from ACTIVE_SESSIONS.
-
-```rust
-fn logout()
-```
-
-### &#9745; Editing Personal Profile
-
-Users can edit their Personal Profile.
-
-```rust
-fn edit_user_personal_data(user_id: String, name: String, surname: String, location: String, age: String, height: String, weight: String) -> Result<(), String>
-```
-
-### &#9745; Viewing Provider Info
-
-Users can view provider info. Provider name, location, departments etc.
-
-```rust
-fn get_provider_info(provider_id: String) -> Option<String>
-```
-
-### &#9745; Listing Doctors
-
-Users can list selected departments doctors.
-
-```rust
-fn list_doctors(provider_id: String, department_name: String) -> Vec<String>
-```
-
-### &#9745; Listing Dates
-
-Users can list available appointment dates for desired doctor.
-
-```rust
-fn list_dates(provider_id: String, department_name: String, doctors_name: String) -> Vec<String>
-```
-
-### &#9745; Listing Times
-
-Users can list available appointment times for desired dates on selected doctor.
-
-```rust
-fn list_times(provider_id: String, department_name: String, doctors_name: String, selected_date: String) -> Vec<String>
-```
-
-### &#9745; Making Appointment
-
-Users can make appointment. If provider has the available appointment according to users input. That appointment will be deleted from providers appointment list and will be added into users active appointments list.
-
-```rust
-fn make_appointment(provider_id: String, department_name: String, doctor_name: String, date: String, time: String) -> Result <(), String>
-```
-
-### &#9745; Listing Appointments
-
-Users can list his active appointments.
-
-```rust
-fn list_appointments(user_id: String) -> HashMap<Principal, Vec<AppointmentDetails>>
-```
-
-## Provider Functionalities
-
-In DMS, providers refer to any facility that is a health or medical service provider.
-
-### &#9745; Adding Departments
-
-Providers can add departments to themselves.
-
-```rust
-fn add_department(provider_id: String, department_name: String) -> Result<(), String>
-```
-
-### &#9745; Adding Doctors
-
-Providers can add doctors to their departments.
-
-```rust
-fn add_doctor(provider_id: String, department_name: String, doctor_name: String) -> Result<(), String>
-```
-
-### &#9745; Adding Dates
-
-Providers can add appointment dates to their doctors.
-
-```rust
-fn add_date(provider_id: String, department_name: String, doctor_name: String, date: String) -> Result <(), String>
-```
-
-### &#9745; Adding Times
-
-Providers can add appointment times to their appointment dates.
-
-```rust
-fn add_time(provider_id: String, department_name: String, doctor_name: String, date: String, time: String) -> Result <(), String>
-```
-
-### &#9745; Getting Patient Info
-
-Providers can get patient info.
-
-```rust
-fn get_patient_info(patient_id: String) -> Option<String>
-```
-
-### &#9745; Adding Disease
-
-Providers can add disease to patients' health data.
-
-```rust
-fn add_disease(user_id: String, disease_name: String) -> Result<(), String>
-```
-
-### &#9745; Adding Allergy
-
-Providers can add allergy to patients' health data.
-
-```rust
-fn add_allergy(user_id: String, allergy_name: String) -> Result<(), String>{
-```
-
-### &#9745; Adding Medications
-
-Providers can add medications to patients' health data.
-
-```rust
-fn add_medication(user_id: String, medication_name: String) -> Result<(), String>{
-```
-
-### &#9745; Editing Provider Info
-
-Providers can edit their info.
-
-```rust
-fn edit_provider_info(provider_id: String, provider_name: String, provider_location: String) -> Result<(), String>
-```
-
-### &#9745; Listings
-
-Providers have access to the same listing functions available to users.
-
-## Admin Functionalities
-
-In the DMS, we require a decision-maker to determine who will become a provider. Therefore, we need an admin user who will fulfill this role. Security checks for this role will be improved.
-
-### &#9745; Listing Signed Users
-
-Admins can list signed users.
-
-```rust
-fn list_signed_users() -> Vec<String>
-```
-
-### &#9745; Listing Active Sessions
-
-Admins can list active sessions, logged in users.
-
-```rust
-fn list_active_sessions() -> Vec<String>
-```
-
-### &#9745; Controlling If User Is Logged In
-
-Admins can check and see if user is logged in.
-
-```rust
-fn is_logged_in(user_id: String) -> bool
-```
-
-### &#9745; Setting Providers
-
-Admins can set providers. When selected, user will be removed from the user list and added to the provider list.
-
-```rust
-fn set_provider(user_id: String) -> Result<(), String>
-```
-
-### &#9745; Listing Providers
-
-Admins can list current providers on DMS.
-
-```rust
-fn list_providers() -> Vec<String>
-```
-
-### &#9745; Removing Providers
-
-Admins can remove a provider from providers lists.
-
-```rust
-fn remove_provider(user_id: String) -> Result<(), String>
-```
-
-## Further Moves
-
-### &#9745; Front-end will be developed using Svelte.
-
-### &#9745; Users can view their health data within the system.
-
-### &#9745; Users can view their medication data within the system.
-
-### &#9745; Providers can update and view patients' health data within the system.
-
-### &#9745; Providers can update and view patients' medication data within the system.
-
-### &#9745; Providers should be accessible by their name.
-
-### [ ] Since one of the aims of DMS is to make medical data valuable, accessing and viewing a patient's information must require certain measures. Therefore, the next development goal is to adjust a grant system for this purpose.
-
-### [ ] Providers may have sub-modules for their doctors, etc., so doctors can perform data management and updates with separate accounts that are linked to that provider. This may necessitate an account linking system.
-
-### [ ] Old-school authentication system will be removed. Instead, users will utilize Internet Identity to connect to the DMS.
-
-### [ ] The functionality for mapping to see the nearest DMS providers, etc., will be added.
-
-### [ ] General functionality of the DMS will be enhanced. Health data sections will be expanded, and provider management will be improved.
+You can see our roadmap and understand where the project is heading.
+<br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/roadmap.jpg"> <br> </br>
