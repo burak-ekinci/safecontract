@@ -124,6 +124,11 @@ Welcome Page
 You can Sign Up or Log In to the DApp
 <br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/login.jpeg"> <br> </br>
 
+## &#9745; Listing my All Contracts
+
+See contracts that you or people have created for you. Confirm as per your wish.
+<br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/notapproved.jpeg"> <br> </br>
+
 ## &#9745; Add a Contract
 
 You can sign and verify contracts with other people
@@ -138,11 +143,6 @@ You can sign and verify contracts with other people
 
 Each user can see whether the other user approves the contract or not
 <br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/allApproved.jpeg"> <br> </br>
-
-## &#9745; Listing my All Contracts
-
-See contracts that you or people have created for you. Confirm as per your wish.
-<br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/notapproved.jpeg"> <br> </br>
 
 ## &#9745; You can See the Roadmap of the Project
 
