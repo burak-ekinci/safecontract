@@ -131,7 +131,7 @@ See contracts that you or people have created for you. Confirm as per your wish.
 
 ## &#9745; Add a Contract
 
-You can sign and verify contracts with other people
+Make a Contract!
 <br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/addContract.jpeg"> <br> </br>
 
 ## &#9745; Approve Contract as a Creator
@@ -148,3 +148,8 @@ Each user can see whether the other user approves the contract or not
 
 You can see our roadmap and understand where the project is heading.
 <br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/roadmap.jpg"> <br> </br>
+
+## &#9745; And Log Out
+
+When you're done, you should log out
+<br> <img src="https://github.com/burak-ekinci/safecontract/blob/main/sc/logout.jpeg"> <br> </br>
