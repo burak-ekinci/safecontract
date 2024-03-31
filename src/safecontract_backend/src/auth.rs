@@ -1,6 +1,5 @@
 use crate::{Session, User, ACTIVE_SESSIONS, USERS};
-use ic_cdk::{query, update};
-use serde_json;
+use ic_cdk::update;
 
 // Sign Up
 #[update]
